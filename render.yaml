@@ -1,12 +1,12 @@
 services:
   - type: web
     name: loansprint-backend
-    env: go
-    buildCommand: cd backend/cmd/server && go build -tags netgo -ldflags '-s -w' -o ../../../app
+    runtime: go
+    buildCommand: chmod +x build.sh && ./build.sh
     startCommand: ./app
     envVars:
       - key: PORT
-        value: 8080
+        sync: false
       - key: GIN_MODE
         value: release
 
