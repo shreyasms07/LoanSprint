@@ -3,8 +3,8 @@ package handlers
 import (
 	"net/http"
 
-	"loansprint/internal/models"
-	"loansprint/internal/services"
+	"loansprint/backend/models"
+	"loansprint/backend/services"
 
 	"github.com/gin-gonic/gin"
 )

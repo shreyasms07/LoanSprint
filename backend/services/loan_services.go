@@ -1,7 +1,7 @@
 package services
 
 import (
-	"loansprint/internal/models"
+	"loansprint/backend/models"
 	"math"
 )
 

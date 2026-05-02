@@ -1,7 +1,7 @@
 package main
 
 import (
-	"loansprint/internal/handlers"
+	"loansprint/backend/handlers"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
