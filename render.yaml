@@ -2,7 +2,7 @@ services:
   - type: web
     name: loansprint-backend
     env: go
-    buildCommand: go build -tags netgo -ldflags '-s -w' -o app ./backend/cmd/server
+    buildCommand: cd backend/cmd/server && go build -tags netgo -ldflags '-s -w' -o ../../../app
     startCommand: ./app
     envVars:
       - key: PORT
@@ -10,4 +10,4 @@ services:
       - key: GIN_MODE
         value: release
 
-# Made with Bob
+ 
