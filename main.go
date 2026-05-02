@@ -13,7 +13,21 @@ func main() {
 
 	// CORS middleware
 	r.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:3000", "https://*.onrender.com", "https://*.vercel.app"},
+		AllowOriginFunc: func(origin string) bool {
+			// Allow localhost for development
+			if origin == "http://localhost:3000" {
+				return true
+			}
+			// Allow any Vercel deployment
+			if len(origin) > 19 && origin[len(origin)-11:] == ".vercel.app" {
+				return true
+			}
+			// Allow any Render deployment
+			if len(origin) > 18 && origin[len(origin)-14:] == ".onrender.com" {
+				return true
+			}
+			return false
+		},
 		AllowMethods:     []string{"GET", "POST", "OPTIONS"},
 		AllowHeaders:     []string{"Origin", "Content-Type"},
 		AllowCredentials: true,
