@@ -1,6 +1,8 @@
+const API_URL = import.meta.env.VITE_API_URL || '';
+
 export const calculateLoan = async (data) => {
   try {
-    const response = await fetch('/plan', {
+    const response = await fetch(`${API_URL}/plan`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
