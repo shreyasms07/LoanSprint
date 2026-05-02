@@ -32,5 +32,3 @@ type LoanPlanEx struct {
 	MonthlyOutflow int `json:"monthly_outflow"`
 	LoanPlan
 }
-
-// Made with Bob

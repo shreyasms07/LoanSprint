@@ -154,5 +154,3 @@ func roundAmount(value float64) int {
 func roundYears(months int) float64 {
 	return math.Round((float64(months)/12)*10) / 10
 }
-
-// Made with Bob

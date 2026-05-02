@@ -204,4 +204,4 @@ const LoanForm = ({ onCalculate, loading }) => {
 
 export default LoanForm;
 
-// Made with Bob
+ 

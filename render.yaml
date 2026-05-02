@@ -2,7 +2,6 @@ services:
   - type: web
     name: loansprint-backend
     runtime: go
-    buildCommand: chmod +x build.sh && ./build.sh
     startCommand: ./app
     envVars:
       - key: PORT
